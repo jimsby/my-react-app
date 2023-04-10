@@ -1,0 +1,21 @@
+import "./CostDate.css"
+
+function CostDate(props) {
+  const year = props.data.date.getFullYear();
+  const month = props.data.date.toLocaleString("ru-RU", {
+    month: "long",
+  });
+  const day = props.data.date.toLocaleString("ru-RU", {
+    day: "2-digit",
+  });
+
+  return (
+    <div className="cost-date">
+      <div className="cost-date__year">{year}</div>
+      <div className="cost-date__month">{month}</div>
+      <div className="cost-date__day">{day}</div>
+    </div>
+  );
+}
+
+export default CostDate;
