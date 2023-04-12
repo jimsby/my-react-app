@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./CostForm.css";
 
 const CostForm = (props) => {
-  const [inputName, setInputName] = useState();
-  const [inputAmount, setInputAmount] = useState();
-  const [inputDate, setInputDate] = useState();
+  const [inputName, setInputName] = useState('');
+  const [inputAmount, setInputAmount] = useState('');
+  const [inputDate, setInputDate] = useState('');
 
   //   const [userInput, setUserInput] = useState({
   //     name: "",
@@ -88,6 +88,7 @@ const CostForm = (props) => {
         </div>
         <div className="new-cost__actions">
           <button type="submit">Добавить расход</button>
+          <button type="button" onClick={props.onCancel}>Отмена</button>
         </div>
       </div>
     </form>
